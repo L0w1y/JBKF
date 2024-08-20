@@ -104,7 +104,7 @@ async function loadTranslations() {
     if (localtranslations) {
         translations = JSON.parse(localtranslations);
     } else {
-        const response = await fetch("https://github.com/")
+        const response = await fetch("https://raw.githubusercontent.com/L0w1y/JBKF/main/translations.json")
         if (!response.ok) {
             translations = {
                     "en" : {
@@ -116,22 +116,9 @@ async function loadTranslations() {
             }
         } else {
             translations = await response.json();
+            localStorage.setItem("translations", JSON.stringify(translations));
         }
     }
-    // const response = await fetch("https://github.com/");
-    // if (!response.ok) {
-    //     translationsFound = false;
-    //     translations = {
-    //         "en" : {
-    //             "permanentLicense": "Get Permanent License",
-    //             "twoYearsLicense": "Get Two Years License",
-    //             "notMarketPlugin": "This plugin is not a market-paid plugin!",
-    //             "copiedToClipboard": "License key has been copied to your clipboard."
-    //         }
-    //     }
-    // } else {
-    //     translations = await response.json();
-    // }
 }
 
 function getUserLanguage() {
