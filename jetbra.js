@@ -140,7 +140,7 @@ function getUserLanguage() {
 
 function getTranslatedCulture(key) {
     const useralang = getUserLanguage();
-    return translations[userlang][key] || translations['en'][key];
+    return translations[useralang][key] || translations['en'][key];
 
     /*`const translations = {
         en: {
