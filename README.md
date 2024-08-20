@@ -28,4 +28,4 @@ After all steps to be done - you will enjoy
 
 # Credits
 
-Special thanks to [Novice LI](https://github.com/novice88)
+Special thanks to [Novice LI](https://github.com/novice88) for main JetBra extension
