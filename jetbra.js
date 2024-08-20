@@ -2,15 +2,15 @@
 // @name         JetBra
 // @namespace    https://github.com/novice88/jetbra
 // @version      5.0
-// @license MIT
+// @license      MIT
 // @description  Add a button on the plugin homepage and click to get the plugin activation code
 // @author       novice.li
 // @match        https://plugins.jetbrains.com/*
 // @grant        GM_setClipboard
 // @grant        GM_addStyle
 // @grant        window.onurlchange
-// @downloadURL https://update.greasyfork.org/scripts/480799/JetBra.user.js
-// @updateURL https://update.greasyfork.org/scripts/480799/JetBra.meta.js
+// @downloadURL  https://update.greasyfork.org/scripts/480799/JetBra.user.js
+// @updateURL    https://update.greasyfork.org/scripts/480799/JetBra.meta.js
 // ==/UserScript==
 
 const pemEncodedKey = `-----BEGIN PRIVATE KEY-----
@@ -264,7 +264,6 @@ function buildLicensePartJson(productCode, licenseId,twoYears) {
 }
 
 async function addButton() {
-    // await loadTranslations();
     injectStyles();
 
     let url = window.location.href
