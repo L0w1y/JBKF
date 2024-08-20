@@ -95,31 +95,74 @@ fIqVyfK6t0eKJqrvp54XFEtJGR+lf3pBfTdcOI6QFEPKGZKoQz8Ck+BC/WBDtbjc
 /uYKczZ8DKZu
 -----END CERTIFICATE-----`;
 
-let translations = {};
-
-let translationsFound = false;
-
-async function loadTranslations() {
-    const localtranslations = localStorage.getItem("translations");
-    if (localtranslations) {
-        translations = JSON.parse(localtranslations);
-    } else {
-        const response = await fetch("https://raw.githubusercontent.com/L0w1y/JBKF/main/translations.json")
-        if (!response.ok) {
-            translations = {
-                    "en" : {
-                    "permanentLicense": "Get Permanent License",
-                    "twoYearsLicense": "Get Two Years License",
-                    "notMarketPlugin": "This plugin is not a market-paid plugin!",
-                    "copiedToClipboard": "License key has been copied to your clipboard."
-                }
-            }
-        } else {
-            translations = await response.json();
-            localStorage.setItem("translations", JSON.stringify(translations));
-        }
+let translations = {
+    "en": {
+        "permanentLicense": "Get Permanent License",
+        "twoYearsLicense": "Get Two Years License",
+        "notMarketPlugin": "This plugin is not a market-paid plugin!",
+        "copiedToClipboard": "License key has been copied to your clipboard."
+    },
+    "zh": {
+        "permanentLicense": "获取永久激活码",
+        "twoYearsLicense": "获取两年激活码",
+        "notMarketPlugin": "该插件不是市场付费插件！",
+        "copiedToClipboard": "激活码已经拷贝到你的剪切板"
+    },
+    "ru": {
+        "permanentLicense": "Получить постоянную лицензию",
+        "twoYearsLicense": "Получить лицензию на два года",
+        "notMarketPlugin": "Этот плагин не является платным на рынке!",
+        "copiedToClipboard": "Лицензионный ключ скопирован в буфер обмена."
+    },
+    "es": {
+        "permanentLicense": "Obtener licencia permanente",
+        "twoYearsLicense": "Obtener licencia por dos años",
+        "notMarketPlugin": "¡Este plugin no es un plugin de pago en el mercado!",
+        "copiedToClipboard": "La clave de licencia se ha copiado al portapapeles."
+    },
+    "fr": {
+        "permanentLicense": "Obtenir une licence permanente",
+        "twoYearsLicense": "Obtenir une licence de deux ans",
+        "notMarketPlugin": "Ce plugin n'est pas un plugin payant du marché!",
+        "copiedToClipboard": "La clé de licence a été copiée dans votre presse-papiers."
+    },
+    "de": {
+        "permanentLicense": "Dauerlizenz erhalten",
+        "twoYearsLicense": "Zwei-Jahres-Lizenz erhalten",
+        "notMarketPlugin": "Dieses Plugin ist kein kostenpflichtiges Markt-Plugin!",
+        "copiedToClipboard": "Der Lizenzschlüssel wurde in Ihre Zwischenablage kopiert."
+    },
+    "pt": {
+        "permanentLicense": "Obter licença permanente",
+        "twoYearsLicense": "Obter licença de dois anos",
+        "notMarketPlugin": "Este plugin não é um plugin pago do mercado!",
+        "copiedToClipboard": "A chave de licença foi copiada para a sua área de transferência."
+    },
+    "ja": {
+        "permanentLicense": "永久ライセンスを取得",
+        "twoYearsLicense": "2年ライセンスを取得",
+        "notMarketPlugin": "このプラグインは市場での有料プラグインではありません！",
+        "copiedToClipboard": "ライセンスキーがクリップボードにコピーされました。"
+    },
+    "ko": {
+        "permanentLicense": "영구 라이선스 받기",
+        "twoYearsLicense": "2년 라이선스 받기",
+        "notMarketPlugin": "이 플러그인은 마켓 유료 플러그인이 아닙니다!",
+        "copiedToClipboard": "라이선스 키가 클립보드에 복사되었습니다."
+    },
+    "it": {
+        "permanentLicense": "Ottieni licenza permanente",
+        "twoYearsLicense": "Ottieni licenza di due anni",
+        "notMarketPlugin": "Questo plugin non è un plugin a pagamento sul mercato!",
+        "copiedToClipboard": "La chiave di licenza è stata copiata negli appunti."
+    },
+    "ar": {
+        "permanentLicense": "الحصول على رخصة دائمة",
+        "twoYearsLicense": "الحصول على رخصة لمدة عامين",
+        "notMarketPlugin": "هذا المكون الإضافي ليس مكونًا مدفوعًا في السوق!",
+        "copiedToClipboard": "تم نسخ مفتاح الترخيص إلى الحافظة الخاصة بك."
     }
-}
+};
 
 function getUserLanguage() {
     const userLang = navigator.language || navigator.languages[0];
@@ -140,31 +183,8 @@ function getUserLanguage() {
 
 function getTranslatedCulture(key) {
     const useralang = getUserLanguage();
-    return translations[useralang][key] || translations['en'][key];
-
-    /*`const translations = {
-        en: {
-            permanentLicense: "Get Permanent License",
-            twoYearsLicense: "Get Two Years License",
-            notMarketPlugin: "This plugin is not a market-paid plugin!",
-            copiedToClipboard: "License key has been copied to your clipboard."
-        },
-        zh: {
-            permanentLicense: "获取永久激活码",
-            twoYearsLicense: "获取两年激活码",
-            notMarketPlugin: "该插件不是市场付费插件！",
-            copiedToClipboard: "激活码已经拷贝到你的剪切板"
-        },
-        ru: {
-            permanentLicense: "Получить постоянную лицензию",
-            twoYearsLicense: "Получить лицензию на два года",
-            notMarketPlugin: "Этот плагин не является платным на рынке!",
-            copiedToClipboard: "Лицензионный ключ скопирован в буфер обмена."
-        }
-    }
-
-    let userlang = navigator.language;
-    return translations[userlang][key] || translations.en[key];`*/
+    const userTranslations = translations[useralang] || {};
+    return userTranslations[key] || translations['en'][key] || key;
 }
 
 function injectStyles() {
@@ -179,7 +199,6 @@ function injectStyles() {
         .jetbra-button:hover { background-color: #057e47; color: white; }
     `);
 }
-
 
 async function findElementWithRetry(cssSelector) {
     const maxAttempts = 50;
@@ -245,14 +264,13 @@ function buildLicensePartJson(productCode, licenseId,twoYears) {
 }
 
 async function addButton() {
+    // await loadTranslations();
     injectStyles();
 
     let url = window.location.href
     if (!url.startsWith('https://plugins.jetbrains.com/plugin/')) {
         return;
     }
-
-    getTranslatedCulture();
 
     let pluginId = url.split('/')[4].split('-')[0]
     console.log('pluginId: ' + pluginId);
@@ -279,7 +297,6 @@ async function addButton() {
     newElement.addEventListener('click', async (e) => {
         let productCode = pluginDetail?.purchaseInfo?.productCode;
         if (productCode === undefined) {
-            // window.alert('该插件不是市场付费插件！');
             window.alert(`${getTranslatedCulture('notMarketPlugin')}`);
             return;
         }
