@@ -1,6 +1,6 @@
-# JBKF
+# JetBrains Key Factory
 
-A simple and lightweight browser extension that allows you to generate JetBrains product codes (including plugins)
+A simple and lightweight browser extension that allows you to generate JetBrains product codes (including plugins), with supports up to **10 languages**
 
 > NOTE: to install this script, you can use tampermonkey, what located [here](https://www.tampermonkey.net/)
 
