@@ -2,7 +2,7 @@
 
 A simple and lightweight browser extension that allows you to generate JetBrains product codes (including plugins), with supports up to **10 languages**
 
-> NOTE: to install this [script](jetbra.user.js), you can use tampermonkey, what located [here](https://www.tampermonkey.net/)
+> NOTE: to install this [script](https://github.com/L0w1y/JBKF/raw/main/jetbra.user.js), you can use tampermonkey, what located [here](https://www.tampermonkey.net/)
 
 # So how it works
 
