@@ -232,8 +232,8 @@ function genLicenseId() {
     }).join('');
 }
 
-function buildLicensePartJson(productCode, licenseId,twoYears) {
-    let formattedDateTwoYears = '2099-08-01';
+function buildLicensePartJson(productCode, licenseId, twoYears) {
+    let formattedDateTwoYears = '9999-01-01';
     if (twoYears) {
         let futureDateTwoYears = new Date();
         futureDateTwoYears.setFullYear(futureDateTwoYears.getFullYear() + 2);
@@ -245,8 +245,8 @@ function buildLicensePartJson(productCode, licenseId,twoYears) {
 
     return JSON.stringify({
         "licenseId": licenseId,
-        "licenseeName": "reborn",
-        "assigneeName": "reborn",
+        "licenseeName": "loch",
+        "assigneeName": "pidor",
         "assigneeEmail": "",
         "licenseRestriction": "",
         "checkConcurrentUse": false,
@@ -257,7 +257,7 @@ function buildLicensePartJson(productCode, licenseId,twoYears) {
         }],
         "metadata": "0120230102PPAA013009",
         "hash": "41472961/0:1563609451",
-        "gracePeriodDays": 7,
+        "gracePeriodDays": 900,
         "autoProlongated": true,
         "isAutoProlongated": true
     });
