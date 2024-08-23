@@ -26,6 +26,8 @@ And after that step - you can open your favorite JetBrains IDE, and activate you
 
 After all steps to be done - you will enjoy
 
-# Credits
+# Important
+
+This script is only modification, what allow's you to see multiple actions in selected language
 
 Special thanks to [Novice LI](https://github.com/novice88) for main JetBra extension
