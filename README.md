@@ -56,7 +56,7 @@ To Activate IDE's I will provide some codes, inside of this table. You can use i
 
 For the first step - we go to [Jetbrains Marketplace](https://plugins.jetbrains.com/)\
 Search, what you needed, and press the generate button (only if it visible)\
-Now you have 2 options - you can generate permanent license, or generate 
+Now you have 2 options - you can generate permanent license, or generate a license, that will be valid up to two years, from the current date
 
 ![Example](https://raw.githubusercontent.com/L0w1y/JBKF/resources/examples/image.png)
 
