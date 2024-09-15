@@ -1,40 +1,40 @@
 # JetBrains Key Factory
 
-Простое и легкое расширение для браузера, которое позволяет генерировать коды продуктов JetBrains (включая плагины), с поддержкой до **10 языков**.
+A simple and lightweight browser extension that allows you to generate JetBrains product codes (including plugins), with supports up to **10 languages**
 
-# Установка
+# Installation
 
-#### Шаг 1
-[+] Скачайте ветку [`agent`](https://github.com/L0w1y/JBKF/archive/refs/heads/agent.zip)\
-[+] Скопируйте папку `jetbra` в корневой каталог диска\
-[+] Откройте папку `jetbra/scripts` и запустите скрипт установки, подходящий для вашей системы
+#### 1st step
+[+] Download [`agent`](https://github.com/L0w1y/JBKF/archive/refs/heads/agent.zip) branch\
+[+] Copy `jetbra` to root disk folder\
+[+] Open `jetbra/scripts` folder, and install script, what allow's your system
 
-| Имя файла | Описание | Платформа |
+| File name | Description | Platform |
 | --------- | ----------- | -------- |
-| `install-all-users.vbs` | Простая установка javaagent для всех пользователей на вашем компьютере | Windows |
-| `install-current-user.vbs` | Установка javaagent только для текущего пользователя | Windows |
-| `uninstall-all-users.vbs` | Удаление javaagent для всех пользователей на вашем компьютере | Windows |
-| `uninstall-current-user.vbs` | Удаление javaagent только для текущего пользователя | Windows |
-| `install.sh` | Установка службы javaagent для текущего пользователя из среды выполнения | Linux/Mac |
-| `uninstall.sh` | Удаление службы javaagent для текущего пользователя из среды выполнения | Linux/Mac |
+| `install-all-users.vbs` | Simply install javaagent for all users in your machine | Windows |
+| `install-current-user.vbs` | Install javaagent for current user only | Windows |
+| `uninstall-all-users.vbs` | Uninstall javaagent for all users in your machine | Windows |
+| `uninstall-current-user.vbs` | Uninstall javaagent for current user only | Windows |
+| `install.sh`|Install javaagent service for current user, from execution environment|Linux/Mac|
+| `uninstall.sh`| Uninstall javaagent service for current user, from execution environment|Linux/Mac|
 
-#### Шаг 2
-[+] Скачайте и установите [tampermonkey](https://www.tampermonkey.net/)\
-[+] [Установите скрипт](https://raw.githubusercontent.com/L0w1y/JBKF/resources/script/jetbra.user.js)
+#### 2nd step
+[+] Download and install [tampermonkey](https://www.tampermonkey.net/)\
+[+] [Install script](https://raw.githubusercontent.com/L0w1y/JBKF/resources/script/jetbra.user.js)
 
 > [!IMPORTANT]
-> Tampermonkey обязателен
+> Tampermonkey reqired
 
-# Активация
+# Activation
 
-### IDE
+### IDEs
 
-Для активации IDE я предоставлю несколько кодов в этой таблице. Вы можете использовать их для первоначальной активации IDE.
+To Activate IDE's I will provide some codes, inside of this table. You can use it for initial IDE activation
 
 > [!NOTE]
-> Выберите ключ, затем вы можете перетащить его в окно активации вашей IDE.
+> Select the key, then you can drag and drop it in your IDE activation window
 
-| IDE | Код активации |
+| IDE | Activation code |
 | --- | :-------------- |
 | ![Aqua](https://raw.githubusercontent.com/L0w1y/JBKF/resources/icons/aqua.svg) |```OHARU4VVAG4GP0U-eyJsaWNlbnNlSWQiOiJPSEFSVTRWVkFHNEdQMFUiLCJsaWNlbnNlZU5hbWUiOiJtZW5vcmFoIHBhcmFwZXQiLCJsaWNlbnNlZVR5cGUiOiJQRVJTT05BTCIsImFzc2lnbmVlTmFtZSI6IiIsImFzc2lnbmVlRW1haWwiOiIiLCJsaWNlbnNlUmVzdHJpY3Rpb24iOiIiLCJjaGVja0NvbmN1cnJlbnRVc2UiOmZhbHNlLCJwcm9kdWN0cyI6W3siY29kZSI6IlBDV01QIiwiZmFsbGJhY2tEYXRlIjoiMjAyNi0wOS0xNCIsInBhaWRVcFRvIjoiMjAyNi0wOS0xNCIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJRQSIsImZhbGxiYWNrRGF0ZSI6IjIwMjYtMDktMTQiLCJwYWlkVXBUbyI6IjIwMjYtMDktMTQiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlBTSSIsImZhbGxiYWNrRGF0ZSI6IjIwMjYtMDktMTQiLCJwYWlkVXBUbyI6IjIwMjYtMDktMTQiLCJleHRlbmRlZCI6dHJ1ZX1dLCJtZXRhZGF0YSI6IjAyMjAyNDA3MDJQU0FYMDAwMDA1WCIsImhhc2giOiIxMjM0NTY3OC8wMTM1OTUwNDQzMyIsImdyYWNlUGVyaW9kRGF5cyI6NywiYXV0b1Byb2xvbmdhdGVkIjpmYWxzZSwiaXNBdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlLCJ0cmlhbCI6ZmFsc2UsImFpQWxsb3dlZCI6dHJ1ZX0=-SQwcqAkvybGdzqO09L65vzBiSxTsFcPjkh4db2rah9Mu0vBe46n+b2hpS2ySR1ZpIEHhVEIbgYig1YM/mb8W1puXcoosECIj3JfqOIuqyK/yS+Z2/JNXNKGVqM2RXVHUmOS+ujYMBkKhgUnJWIzJBgjB5k1etUwVBFqw2vxuwS79N3MqKXFTXWRkS8DD5HUfpvwrnCICBy4xMZ6p83f1nm06OdKjl+P1XjORCzvBPLZDrJe6XVOu6FhHCdrPj9qPFLyg55twfvqt6kVk9Ifr+AauT4z3VWUBfPKHdug87yijoLFecb/sOCpixyqoVamu3KObysAYgS/OM6X1Izshdw==-MIIETDCCAjSgAwIBAgIBDTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTIwMTAxOTA5MDU1M1oXDTIyMTAyMTA5MDU1M1owHzEdMBsGA1UEAwwUcHJvZDJ5LWZyb20tMjAyMDEwMTkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCUlaUFc1wf+CfY9wzFWEL2euKQ5nswqb57V8QZG7d7RoR6rwYUIXseTOAFq210oMEe++LCjzKDuqwDfsyhgDNTgZBPAaC4vUU2oy+XR+Fq8nBixWIsH668HeOnRK6RRhsr0rJzRB95aZ3EAPzBuQ2qPaNGm17pAX0Rd6MPRgjp75IWwI9eA6aMEdPQEVN7uyOtM5zSsjoj79Lbu1fjShOnQZuJcsV8tqnayeFkNzv2LTOlofU/Tbx502Ro073gGjoeRzNvrynAP03pL486P3KCAyiNPhDs2z8/COMrxRlZW5mfzo0xsK0dQGNH3UoG/9RVwHG4eS8LFpMTR9oetHZBAgMBAAGjgZkwgZYwCQYDVR0TBAIwADAdBgNVHQ4EFgQUJNoRIpb1hUHAk0foMSNM9MCEAv8wSAYDVR0jBEEwP4AUo562SGdCEjZBvW3gubSgUouX8bOhHKQaMBgxFjAUBgNVBAMMDUpldFByb2ZpbGUgQ0GCCQDSbLGDsoN54TATBgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBaAwDQYJKoZIhvcNAQELBQADggIBABKaDfYJk51mtYwUFK8xqhiZaYPd30TlmCmSAaGJ0eBpvkVeqA2jGYhAQRqFiAlFC63JKvWvRZO1iRuWCEfUMkdqQ9VQPXziE/BlsOIgrL6RlJfuFcEZ8TK3syIfIGQZNCxYhLLUuet2HE6LJYPQ5c0jH4kDooRpcVZ4rBxNwddpctUO2te9UU5/FjhioZQsPvd92qOTsV+8Cyl2fvNhNKD1Uu9ff5AkVIQn4JU23ozdB/R5oUlebwaTE6WZNBs+TA/qPj+5/we9NH71WRB0hqUoLI2AKKyiPw++FtN4Su1vsdDlrAzDj9ILjpjJKA1ImuVcG329/WTYIKysZ1CWK3zATg9BeCUPAV1pQy8ToXOq+RSYen6winZ2OO93eyHv2Iw5kbn1dqfBw1BuTE29V2FJKicJSu8iEOpfoafwJISXmz1wnnWL3V/0NxTulfWsXugOoLfv0ZIBP1xH9kmf22jjQ2JiHhQZP7ZDsreRrOeIQ/c4yR8IQvMLfC0WKQqrHu5ZzXTH4NO3CwGWSlTY74kE91zXB5mwWAx1jig+UXYc2w4RkVhy0//lOmVya/PEepuuTTI4+UJwC7qbVlh5zfhj8oTNUXgN0AOc+Q0/WFPl1aw5VV/VrO8FCoB15lFVlpKaQ1Yh+DVU8ke+rt9Th0BCHXe0uZOEmH0nOnH/0onD```|
 | ![Clion](https://raw.githubusercontent.com/L0w1y/JBKF/resources/icons/clion.svg) |```I1EKS18DJA9M4KU-eyJsaWNlbnNlSWQiOiJJMUVLUzE4REpBOU00S1UiLCJsaWNlbnNlZU5hbWUiOiJtZW5vcmFoIHBhcmFwZXQiLCJsaWNlbnNlZVR5cGUiOiJQRVJTT05BTCIsImFzc2lnbmVlTmFtZSI6IiIsImFzc2lnbmVlRW1haWwiOiIiLCJsaWNlbnNlUmVzdHJpY3Rpb24iOiIiLCJjaGVja0NvbmN1cnJlbnRVc2UiOmZhbHNlLCJwcm9kdWN0cyI6W3siY29kZSI6IlBDV01QIiwiZmFsbGJhY2tEYXRlIjoiMjAyNi0wOS0xNCIsInBhaWRVcFRvIjoiMjAyNi0wOS0xNCIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJDTCIsImZhbGxiYWNrRGF0ZSI6IjIwMjYtMDktMTQiLCJwYWlkVXBUbyI6IjIwMjYtMDktMTQiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlBTSSIsImZhbGxiYWNrRGF0ZSI6IjIwMjYtMDktMTQiLCJwYWlkVXBUbyI6IjIwMjYtMDktMTQiLCJleHRlbmRlZCI6dHJ1ZX1dLCJtZXRhZGF0YSI6IjAyMjAyNDA3MDJQU0FYMDAwMDA1WCIsImhhc2giOiIxMjM0NTY3OC8wMzMxNTgxNTM4IiwiZ3JhY2VQZXJpb2REYXlzIjo3LCJhdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlLCJpc0F1dG9Qcm9sb25nYXRlZCI6ZmFsc2UsInRyaWFsIjpmYWxzZSwiYWlBbGxvd2VkIjp0cnVlfQ==-aBxu18kI8ObI+2malKBqZXqpCPT2T7+0adYDU0HBQMeY1J+M/lDGpdQjpDnlDWW3W7wb4QbES3TXl8kKRrVG8LgtwVg9DhtNSWcolfL0R5x73smRjZQB5Jfv4fwBtBu+I4fTrkP9HAwciOIKO3iyI8wsH8HVGR9AXgpl/wTLCSlj8/7IBAFz6wN8mgSdxV6ReEGSjQSDSevdQUbsFkq3LVYG9EXVvleltbdFq7wqVCmvmcnW1idgfDKzJrwlxtJRiLZoZIoEFJ/PXcivuKTJyiqKlDfOuaPt6wZU+aqw/xB5dBS51rzD8UwoLcnN5zlG5WwQPWZja1/UwTokUxR8Gw==-MIIETDCCAjSgAwIBAgIBDTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTIwMTAxOTA5MDU1M1oXDTIyMTAyMTA5MDU1M1owHzEdMBsGA1UEAwwUcHJvZDJ5LWZyb20tMjAyMDEwMTkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCUlaUFc1wf+CfY9wzFWEL2euKQ5nswqb57V8QZG7d7RoR6rwYUIXseTOAFq210oMEe++LCjzKDuqwDfsyhgDNTgZBPAaC4vUU2oy+XR+Fq8nBixWIsH668HeOnRK6RRhsr0rJzRB95aZ3EAPzBuQ2qPaNGm17pAX0Rd6MPRgjp75IWwI9eA6aMEdPQEVN7uyOtM5zSsjoj79Lbu1fjShOnQZuJcsV8tqnayeFkNzv2LTOlofU/Tbx502Ro073gGjoeRzNvrynAP03pL486P3KCAyiNPhDs2z8/COMrxRlZW5mfzo0xsK0dQGNH3UoG/9RVwHG4eS8LFpMTR9oetHZBAgMBAAGjgZkwgZYwCQYDVR0TBAIwADAdBgNVHQ4EFgQUJNoRIpb1hUHAk0foMSNM9MCEAv8wSAYDVR0jBEEwP4AUo562SGdCEjZBvW3gubSgUouX8bOhHKQaMBgxFjAUBgNVBAMMDUpldFByb2ZpbGUgQ0GCCQDSbLGDsoN54TATBgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBaAwDQYJKoZIhvcNAQELBQADggIBABKaDfYJk51mtYwUFK8xqhiZaYPd30TlmCmSAaGJ0eBpvkVeqA2jGYhAQRqFiAlFC63JKvWvRZO1iRuWCEfUMkdqQ9VQPXziE/BlsOIgrL6RlJfuFcEZ8TK3syIfIGQZNCxYhLLUuet2HE6LJYPQ5c0jH4kDooRpcVZ4rBxNwddpctUO2te9UU5/FjhioZQsPvd92qOTsV+8Cyl2fvNhNKD1Uu9ff5AkVIQn4JU23ozdB/R5oUlebwaTE6WZNBs+TA/qPj+5/we9NH71WRB0hqUoLI2AKKyiPw++FtN4Su1vsdDlrAzDj9ILjpjJKA1ImuVcG329/WTYIKysZ1CWK3zATg9BeCUPAV1pQy8ToXOq+RSYen6winZ2OO93eyHv2Iw5kbn1dqfBw1BuTE29V2FJKicJSu8iEOpfoafwJISXmz1wnnWL3V/0NxTulfWsXugOoLfv0ZIBP1xH9kmf22jjQ2JiHhQZP7ZDsreRrOeIQ/c4yR8IQvMLfC0WKQqrHu5ZzXTH4NO3CwGWSlTY74kE91zXB5mwWAx1jig+UXYc2w4RkVhy0//lOmVya/PEepuuTTI4+UJwC7qbVlh5zfhj8oTNUXgN0AOc+Q0/WFPl1aw5VV/VrO8FCoB15lFVlpKaQ1Yh+DVU8ke+rt9Th0BCHXe0uZOEmH0nOnH/0onD```|
@@ -52,22 +52,22 @@
 | ![RustRover](https://raw.githubusercontent.com/L0w1y/JBKF/resources/icons/rustrover.svg) |```TRY38TEUMV07NQH-eyJsaWNlbnNlSWQiOiJUUlkzOFRFVU1WMDdOUUgiLCJsaWNlbnNlZU5hbWUiOiJtZW5vcmFoIHBhcmFwZXQiLCJsaWNlbnNlZVR5cGUiOiJQRVJTT05BTCIsImFzc2lnbmVlTmFtZSI6IiIsImFzc2lnbmVlRW1haWwiOiIiLCJsaWNlbnNlUmVzdHJpY3Rpb24iOiIiLCJjaGVja0NvbmN1cnJlbnRVc2UiOmZhbHNlLCJwcm9kdWN0cyI6W3siY29kZSI6IlBDV01QIiwiZmFsbGJhY2tEYXRlIjoiMjAyNi0wOS0xNCIsInBhaWRVcFRvIjoiMjAyNi0wOS0xNCIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJQUlIiLCJmYWxsYmFja0RhdGUiOiIyMDI2LTA5LTE0IiwicGFpZFVwVG8iOiIyMDI2LTA5LTE0IiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IlBTSSIsImZhbGxiYWNrRGF0ZSI6IjIwMjYtMDktMTQiLCJwYWlkVXBUbyI6IjIwMjYtMDktMTQiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUlIiLCJmYWxsYmFja0RhdGUiOiIyMDI2LTA5LTE0IiwicGFpZFVwVG8iOiIyMDI2LTA5LTE0IiwiZXh0ZW5kZWQiOmZhbHNlfV0sIm1ldGFkYXRhIjoiMDIyMDI0MDcwMlBTQVgwMDAwMDVYIiwiaGFzaCI6IjEyMzQ1Njc4LzAxNzYyNjY5OTAxIiwiZ3JhY2VQZXJpb2REYXlzIjo3LCJhdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlLCJpc0F1dG9Qcm9sb25nYXRlZCI6ZmFsc2UsInRyaWFsIjpmYWxzZSwiYWlBbGxvd2VkIjp0cnVlfQ==-MGoF9KNRZYTdjvzbKDtQ7JsVcUBuDej9qMukqhQHbF+byyY25F2H7YbW4lrMSOevKWRiehBjeSh6oJmWkrkECQvZJe17BhXKAP1QikuHar6pzDrIZy5gpPYVo6i509dtbDnqV8tt1rXvedkCkG5t3Jmxe2ZJGKKtPJSFZhiPPWOvRGbnL9GNydj9M3N2AaSVhRKidVXuVY26L5I01rRW+jDSlbD/h4e0CZZap5SHYOizQ+5nNBEef6lS0O8LJT1ov9NfHL7XzcGVzBDOFCRH6q1c9F+kMvkOtA7tNjUziTGaZ8tExlulPDg0skVyrHq24z6aSl8okqJufcKjrteK4w==-MIIETDCCAjSgAwIBAgIBDTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTIwMTAxOTA5MDU1M1oXDTIyMTAyMTA5MDU1M1owHzEdMBsGA1UEAwwUcHJvZDJ5LWZyb20tMjAyMDEwMTkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCUlaUFc1wf+CfY9wzFWEL2euKQ5nswqb57V8QZG7d7RoR6rwYUIXseTOAFq210oMEe++LCjzKDuqwDfsyhgDNTgZBPAaC4vUU2oy+XR+Fq8nBixWIsH668HeOnRK6RRhsr0rJzRB95aZ3EAPzBuQ2qPaNGm17pAX0Rd6MPRgjp75IWwI9eA6aMEdPQEVN7uyOtM5zSsjoj79Lbu1fjShOnQZuJcsV8tqnayeFkNzv2LTOlofU/Tbx502Ro073gGjoeRzNvrynAP03pL486P3KCAyiNPhDs2z8/COMrxRlZW5mfzo0xsK0dQGNH3UoG/9RVwHG4eS8LFpMTR9oetHZBAgMBAAGjgZkwgZYwCQYDVR0TBAIwADAdBgNVHQ4EFgQUJNoRIpb1hUHAk0foMSNM9MCEAv8wSAYDVR0jBEEwP4AUo562SGdCEjZBvW3gubSgUouX8bOhHKQaMBgxFjAUBgNVBAMMDUpldFByb2ZpbGUgQ0GCCQDSbLGDsoN54TATBgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBaAwDQYJKoZIhvcNAQELBQADggIBABKaDfYJk51mtYwUFK8xqhiZaYPd30TlmCmSAaGJ0eBpvkVeqA2jGYhAQRqFiAlFC63JKvWvRZO1iRuWCEfUMkdqQ9VQPXziE/BlsOIgrL6RlJfuFcEZ8TK3syIfIGQZNCxYhLLUuet2HE6LJYPQ5c0jH4kDooRpcVZ4rBxNwddpctUO2te9UU5/FjhioZQsPvd92qOTsV+8Cyl2fvNhNKD1Uu9ff5AkVIQn4JU23ozdB/R5oUlebwaTE6WZNBs+TA/qPj+5/we9NH71WRB0hqUoLI2AKKyiPw++FtN4Su1vsdDlrAzDj9ILjpjJKA1ImuVcG329/WTYIKysZ1CWK3zATg9BeCUPAV1pQy8ToXOq+RSYen6winZ2OO93eyHv2Iw5kbn1dqfBw1BuTE29V2FJKicJSu8iEOpfoafwJISXmz1wnnWL3V/0NxTulfWsXugOoLfv0ZIBP1xH9kmf22jjQ2JiHhQZP7ZDsreRrOeIQ/c4yR8IQvMLfC0WKQqrHu5ZzXTH4NO3CwGWSlTY74kE91zXB5mwWAx1jig+UXYc2w4RkVhy0//lOmVya/PEepuuTTI4+UJwC7qbVlh5zfhj8oTNUXgN0AOc+Q0/WFPl1aw5VV/VrO8FCoB15lFVlpKaQ1Yh+DVU8ke+rt9Th0BCHXe0uZOEmH0nOnH/0onD```|
 | ![WebStorm](https://raw.githubusercontent.com/L0w1y/JBKF/resources/icons/webstorm.svg) |```1Z9RTLFFQRXP923-eyJsaWNlbnNlSWQiOiIxWjlSVExGRlFSWFA5MjMiLCJsaWNlbnNlZU5hbWUiOiJtZW5vcmFoIHBhcmFwZXQiLCJsaWNlbnNlZVR5cGUiOiJQRVJTT05BTCIsImFzc2lnbmVlTmFtZSI6IiIsImFzc2lnbmVlRW1haWwiOiIiLCJsaWNlbnNlUmVzdHJpY3Rpb24iOiIiLCJjaGVja0NvbmN1cnJlbnRVc2UiOmZhbHNlLCJwcm9kdWN0cyI6W3siY29kZSI6IlBDV01QIiwiZmFsbGJhY2tEYXRlIjoiMjAyNi0wOS0xNCIsInBhaWRVcFRvIjoiMjAyNi0wOS0xNCIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJXUyIsImZhbGxiYWNrRGF0ZSI6IjIwMjYtMDktMTQiLCJwYWlkVXBUbyI6IjIwMjYtMDktMTQiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlBTSSIsImZhbGxiYWNrRGF0ZSI6IjIwMjYtMDktMTQiLCJwYWlkVXBUbyI6IjIwMjYtMDktMTQiLCJleHRlbmRlZCI6dHJ1ZX1dLCJtZXRhZGF0YSI6IjAyMjAyNDA3MDJQU0FYMDAwMDA1WCIsImhhc2giOiIxMjM0NTY3OC8wNzY0Njg1NzM3IiwiZ3JhY2VQZXJpb2REYXlzIjo3LCJhdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlLCJpc0F1dG9Qcm9sb25nYXRlZCI6ZmFsc2UsInRyaWFsIjpmYWxzZSwiYWlBbGxvd2VkIjp0cnVlfQ==-bDIQ6Ihy8nWMd6+TEQxRYY2FDAO5yhA1knCEpdqRbstNWI78rmC/WTYm8PFmDK2QEEE7uawIblm6c2FAXLrLzkA7R+V3G+q/xZyYPGftNp4n7mW+VT35+t131R5UvTIoQNzf3dCJDFBD2fiJwDNgUzdwEKEjagjNLlSk5HQam3wZh8+x8aao2yEzgoBHgGrs+8Y8BHKecS9eZImboDJ+e8cT+JI92nNCx1IhPgVJDieNKlbYbCxJ9HgvHFUMSrkh0MPORn9IxmKLt6ssMU2kEMWR4HqcQjUgGRzt8cWJh0nihrqBlDFZwfKQj25oK07vAu22ysN4CkcNRyMcJBBP9A==-MIIETDCCAjSgAwIBAgIBDTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTIwMTAxOTA5MDU1M1oXDTIyMTAyMTA5MDU1M1owHzEdMBsGA1UEAwwUcHJvZDJ5LWZyb20tMjAyMDEwMTkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCUlaUFc1wf+CfY9wzFWEL2euKQ5nswqb57V8QZG7d7RoR6rwYUIXseTOAFq210oMEe++LCjzKDuqwDfsyhgDNTgZBPAaC4vUU2oy+XR+Fq8nBixWIsH668HeOnRK6RRhsr0rJzRB95aZ3EAPzBuQ2qPaNGm17pAX0Rd6MPRgjp75IWwI9eA6aMEdPQEVN7uyOtM5zSsjoj79Lbu1fjShOnQZuJcsV8tqnayeFkNzv2LTOlofU/Tbx502Ro073gGjoeRzNvrynAP03pL486P3KCAyiNPhDs2z8/COMrxRlZW5mfzo0xsK0dQGNH3UoG/9RVwHG4eS8LFpMTR9oetHZBAgMBAAGjgZkwgZYwCQYDVR0TBAIwADAdBgNVHQ4EFgQUJNoRIpb1hUHAk0foMSNM9MCEAv8wSAYDVR0jBEEwP4AUo562SGdCEjZBvW3gubSgUouX8bOhHKQaMBgxFjAUBgNVBAMMDUpldFByb2ZpbGUgQ0GCCQDSbLGDsoN54TATBgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBaAwDQYJKoZIhvcNAQELBQADggIBABKaDfYJk51mtYwUFK8xqhiZaYPd30TlmCmSAaGJ0eBpvkVeqA2jGYhAQRqFiAlFC63JKvWvRZO1iRuWCEfUMkdqQ9VQPXziE/BlsOIgrL6RlJfuFcEZ8TK3syIfIGQZNCxYhLLUuet2HE6LJYPQ5c0jH4kDooRpcVZ4rBxNwddpctUO2te9UU5/FjhioZQsPvd92qOTsV+8Cyl2fvNhNKD1Uu9ff5AkVIQn4JU23ozdB/R5oUlebwaTE6WZNBs+TA/qPj+5/we9NH71WRB0hqUoLI2AKKyiPw++FtN4Su1vsdDlrAzDj9ILjpjJKA1ImuVcG329/WTYIKysZ1CWK3zATg9BeCUPAV1pQy8ToXOq+RSYen6winZ2OO93eyHv2Iw5kbn1dqfBw1BuTE29V2FJKicJSu8iEOpfoafwJISXmz1wnnWL3V/0NxTulfWsXugOoLfv0ZIBP1xH9kmf22jjQ2JiHhQZP7ZDsreRrOeIQ/c4yR8IQvMLfC0WKQqrHu5ZzXTH4NO3CwGWSlTY74kE91zXB5mwWAx1jig+UXYc2w4RkVhy0//lOmVya/PEepuuTTI4+UJwC7qbVlh5zfhj8oTNUXgN0AOc+Q0/WFPl1aw5VV/VrO8FCoB15lFVlpKaQ1Yh+DVU8ke+rt9Th0BCHXe0uZOEmH0nOnH/0onD```|
 
-### Плагины
+### Plugins
 
-Для начала перейдите на [Jetbrains Marketplace](https://plugins.jetbrains.com/).
-Найдите нужный плагин и нажмите кнопку "Generate" (только если она видна).
-Теперь у вас есть 2 варианта: вы можете сгенерировать постоянную лицензию или лицензию, которая будет действительна до двух лет с текущей даты.
+For the first step - we go to [Jetbrains Marketplace](https://plugins.jetbrains.com/)\
+Search, what you needed, and press the generate button (only if it visible)\
+Now you have 2 options - you can generate permanent license, or generate a license, that will be valid up to two years, from the current date
 
-![Пример](https://raw.githubusercontent.com/L0w1y/JBKF/resources/examples/image.png)
+![Example](https://raw.githubusercontent.com/L0w1y/JBKF/resources/examples/image.png)
 
-При нажатии на кнопку скрипт выведет уведомление о состоянии текущей задачи.
-Если задача успешно завершена, вы получите сообщение, подобное этому: "**Скопировано в буфер обмена**... и т.д.", и код, который был скопирован!
-После этого шага вы можете открыть свою любимую IDE JetBrains и активировать свой плагин!
+If you press the button - script will thrown the allert, with state of current task\
+if the task successfuly completed - you will got message, what looks like that: "**Copied to clipboard**... etc", and the code, what has been copied!\
+And after that step - you can open your favorite JetBrains IDE, and activate your plugin!
 > [!NOTE]
-> Если плагин не платный или недоступен, вы получите соответствующее сообщение.
+> if the plugin is not paid, or not available - you will got a message
 
-# Важно
+# Important
 
-Этот скрипт является лишь модификацией, которая позволяет вам видеть несколько действий на выбранном языке.
+This script is only modification, what allow's you to see multiple actions in selected language
 
-Особая благодарность [Novice LI](https://github.com/novice88) за основное расширение JetBra.
+Special thanks to [Novice LI](https://github.com/novice88) for main JetBra extension
