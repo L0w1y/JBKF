@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Многоязычный README</title>
 </head>
 <body>
     <div id="content">
