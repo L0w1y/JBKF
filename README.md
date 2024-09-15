@@ -1,1 +1,3 @@
-<script>fetch('https://github.com/L0w1y/JBKF/raw/main/lang/'+((navigator.language||navigator.userLanguage)=='ru'?'ru_RU':'en_US')+'/README.md').then(r=>r.text()).then(m=>m);</script>
+[English language](lang/en_US/README.md)
+
+[Русский язык](lang/ru_RU/README.md)
