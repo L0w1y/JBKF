@@ -3,19 +3,19 @@ Set oEnv = oShell.Environment("USER")
 Set oFS = CreateObject("Scripting.FileSystemObject")
 
 Dim sEnvKey, sEnvVal, aJBProducts
-aJBProducts = Array("idea", "clion", "phpstorm", "goland", "pycharm", "webstorm", "webide", "rider", "datagrip", "rubymine", "appcode", "dataspell", "gateway", "jetbrains_client", "jetbrainsclient", "studio", "devecostudio")
+aJBProducts = Array("idea", "clion", "phpstorm", "goland", "pycharm", "webstorm", "webide", "rider", "datagrip", "rubymine", "dataspell", "aqua", "rustrover", "gateway", "jetbrains_client", "jetbrainsclient", "studio", "devecostudio")
 
 Set re = New RegExp
 re.Global     = True
 re.IgnoreCase = True
-re.Pattern    = "^\-javaagent:.*[\/\\]jetbra\-agent\.jar.*"
+re.Pattern    = "^\-javaagent:.*[\/\\]ja\-netfilter\.jar.*"
 
 Dim sBasePath, sJarFile
 sBasePath = oFS.GetParentFolderName(oShell.CurrentDirectory)
-sJarFile = sBasePath & "\jetbra-agent.jar"
+sJarFile = sBasePath & "\ja-netfilter.jar"
 
 If Not oFS.FileExists(sJarFile) Then
-    MsgBox "jetbra-agent.jar not found", vbOKOnly Or vbCritical
+    MsgBox "ja-netfilter.jar not found", vbOKOnly Or vbCritical
     WScript.Quit -1
 End If
 
@@ -45,7 +45,7 @@ Sub ProcessVmOptions(ByVal file)
     Loop
     oFile.Close
 
-    sNewContent = sNewContent & "-javaagent:" & sJarFile
+    sNewContent = sNewContent & "-javaagent:" & sJarFile & "=jetbrains"
     Set oFile = oFS.OpenTextFile(file, 2, 0)
     oFile.Write sNewContent
     oFile.Close

@@ -1,5 +1,5 @@
--Xms512m
--Xmx2g
+-Xms128m
+-Xmx1024m
 -XX:ReservedCodeCacheSize=512m
 -XX:+IgnoreUnrecognizedVMOptions
 -XX:+UseG1GC
@@ -19,4 +19,3 @@
 --add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED
 --add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED
 
--javaagent:C:\Users\E82Y\AppData\Local\JetBrains\JetNew\jetbra-agent.jar

@@ -3,17 +3,17 @@
 set -e
 
 OS_NAME=$(uname -s)
-JB_PRODUCTS="idea clion phpstorm goland pycharm webstorm webide rider datagrip rubymine appcode dataspell gateway jetbrains_client jetbrainsclient studio devecostudio"
+JB_PRODUCTS="idea clion phpstorm goland pycharm webstorm webide rider datagrip rubymine dataspell aqua rustrover gateway jetbrains_client jetbrainsclient studio devecostudio"
 
 BASE_PATH=$(dirname $(
   cd $(dirname "$0")
   pwd
 ))
 
-JAR_FILE_PATH="${BASE_PATH}/jetbra-agent.jar"
+JAR_FILE_PATH="${BASE_PATH}/ja-netfilter.jar"
 
 if [ ! -f "${JAR_FILE_PATH}" ]; then
-  echo 'jetbra-agent.jar not found'
+  echo 'ja-netfilter.jar not found'
   exit -1
 fi
 
@@ -51,12 +51,12 @@ for PRD in $JB_PRODUCTS; do
   fi
 
   if [ $OS_NAME = "Darwin" ]; then
-    sed -i '' '/^\-javaagent:.*[\/\\]jetbra\-agent\.jar.*/d' "${VM_FILE_PATH}"
+    sed -i '' '/^\-javaagent:.*[\/\\]ja\-netfilter\.jar.*/d' "${VM_FILE_PATH}"
   else
-    sed -i '/^\-javaagent:.*[\/\\]jetbra\-agent\.jar.*/d' "${VM_FILE_PATH}"
+    sed -i '/^\-javaagent:.*[\/\\]ja\-netfilter\.jar.*/d' "${VM_FILE_PATH}"
   fi
 
-  echo "-javaagent:${JAR_FILE_PATH}" >>"${VM_FILE_PATH}"
+  echo "-javaagent:${JAR_FILE_PATH}=jetbrains" >>"${VM_FILE_PATH}"
 
   ENV_NAME=$(echo $PRD | tr '[a-z]' '[A-Z]')"_VM_OPTIONS"
   echo "export ${ENV_NAME}=\"${VM_FILE_PATH}\"" >>"${MY_VMOPTIONS_SHELL_FILE}"
