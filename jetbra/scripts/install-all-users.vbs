@@ -70,4 +70,4 @@ Sub ProcessVmOptions(ByVal file)
     oFile.Close
 End Sub
 
-MsgBox "Done."
+MsgBox "Done. Activation code in @L0wl/JBKF"
